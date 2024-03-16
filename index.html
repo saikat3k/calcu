@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .hero-area{
+            width: 400px;
+            height: 300px;
+            margin:0 auto;
+            background-color: blueviolet;
+            text-align: center;
+            
+        }
+        .num1{
+            margin: 20px;
+            padding: 10px;
+            border: none;
+        }
+        .num1:focus{
+            outline: none;
+        }
+        .num2{
+            margin: 10px;
+            padding: 10px;
+            border: none;
+        }
+        .num2:focus{
+            outline: none;
+        }
+        button{
+            width: 45px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 20px 0px;
+        }
+        p{
+            font-size: 1.2rem;
+            color: #111;
+            /* border: 2px solid tomato; */
+            background-color: #FFF;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-area">
+            <input type="number" name="" id="" class="num1" placeholder="Enter value"><br>
+            <input type="number" name="" id="" class="num2" placeholder="Enter value"><br>
+            <button class="plus">+</button>
+            <button class="minus" >-</button>
+            <button class="multi">x</button>
+            <button class="devide">/</button><br>
+            <!-- <button class="result">=</button> -->
+            <p>Rssult</p>
+        </div>
+       
+    </div>
+
+    <script>
+        // variaables
+        const num1 = document.querySelector('.num1');
+        const num2 = document.querySelector('.num2');
+        const plus = document.querySelector('.plus');
+        const minus = document.querySelector('.minus');
+        const multi = document.querySelector('.multi');
+        const devide = document.querySelector('.devide');
+        const resultPrint = document.querySelector('p');
+
+
+        // function
+        plus.addEventListener('click',()=>{
+            resultPrint.innerHTML = (Number(num1.value) + Number(num2.value));
+            plus.style.backgroundColor = 'red' 
+            plus.style.color = '#FFF' 
+        });
+        minus.addEventListener('click',()=>{
+            resultPrint.innerHTML = (Number(num1.value) - Number(num2.value)); 
+            minus.style.backgroundColor = 'red' 
+            minus.style.color = '#FFF' 
+        });
+        multi.addEventListener('click',()=>{
+            resultPrint.innerHTML = (Number(num1.value) * Number(num2.value)); 
+            multi.style.backgroundColor = 'red' 
+            multi.style.color = '#FFF' 
+        });
+        devide.addEventListener('click',()=>{
+            resultPrint.innerHTML = (Number(num1.value) / Number(num2.value)); 
+            devide.style.backgroundColor = 'red' 
+            devide.style.color = '#FFF' 
+        });
+    </script>
+</body>
+</html>
